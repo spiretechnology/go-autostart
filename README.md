@@ -7,7 +7,7 @@ Go library to register your app to autostart on startup (supports Linux, macOS, 
 ```go
 // Define your app's autostart behavior
 app := autostart.New(autostart.Options{
-    Label: "com.myapp.MyApp",
+    Label: "com.mycompany.MyApp",
     Vendor: "Company"
     Name: "My App",
     Description: "My app description",
@@ -71,7 +71,7 @@ log.Println("Hello, world!")
 ```go
 // Define your app's autostart behavior
 app := autostart.New(autostart.Options{
-    Label: "com.myapp.MyApp",
+    Label: "com.mycompany.MyApp",
     Vendor: "Company"
     Name: "My App",
     Description: "My app description",

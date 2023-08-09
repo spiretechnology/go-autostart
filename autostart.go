@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/spiretechnology/go-autostart/appdata"
-	"github.com/spiretechnology/go-autostart/internal/errutil"
-	"github.com/spiretechnology/go-autostart/internal/logutil"
+	"github.com/spiretechnology/go-autostart/v2/appdata"
+	"github.com/spiretechnology/go-autostart/v2/internal/errutil"
+	"github.com/spiretechnology/go-autostart/v2/internal/logutil"
 )
 
 // Autostart defines the interface for an autostart app.

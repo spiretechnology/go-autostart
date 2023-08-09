@@ -10,7 +10,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/spiretechnology/go-autostart/internal/errutil"
+	"github.com/spiretechnology/go-autostart/v2/internal/errutil"
 )
 
 //go:embed templates/linux_systemd.service

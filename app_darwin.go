@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/spiretechnology/go-autostart/internal/errutil"
+	"github.com/spiretechnology/go-autostart/v2/internal/errutil"
 )
 
 //go:embed templates/macos_launchd.plist

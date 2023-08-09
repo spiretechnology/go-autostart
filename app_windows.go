@@ -17,7 +17,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/spiretechnology/go-autostart/internal/errutil"
+	"github.com/spiretechnology/go-autostart/v2/internal/errutil"
 	"golang.org/x/sys/windows/svc/mgr"
 )
 

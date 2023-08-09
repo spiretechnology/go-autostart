@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/spiretechnology/go-autostart/internal/errutil"
+	"github.com/spiretechnology/go-autostart/v2/internal/errutil"
 )
 
 // OverrideStdout creates a wrapper around stdout that writes to both a log file and

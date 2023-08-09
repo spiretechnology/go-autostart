@@ -1,0 +1,15 @@
+[Unit]
+Description={{.Options.Name}}
+After=network-online.target
+Wants=network-online.target systemd-networkd-wait-online.service
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+ExecStart={{.BinaryPath}} {{.Arguments}}
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy={{.WantedBy}}

@@ -1,0 +1,48 @@
+name: Pull Request Workflow
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+jobs:
+  checks:
+    name: Workspace Checks
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: actions/setup-go@v2
+      with:
+        go-version: '1.20'
+
+    - name: Lint
+      run: if [ "$(gofmt -s -l . | wc -l)" -gt 0 ]; then exit 1; fi
+
+    - name: Tidy
+      run: |
+        go mod tidy
+        if [[ -n $(git status -s) ]]; then exit 1; fi
+
+  test:
+    name: Build and Test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: actions/setup-go@v2
+      with:
+        go-version: '1.20'
+
+    - name: Vet
+      run: go vet ./...
+
+    - name: Test
+      run: go test ./...

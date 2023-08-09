@@ -3,14 +3,20 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>{{.Label}}</string>
+        <string>{{.Options.Label}}</string>
         <key>Program</key>
         <string>{{.BinaryPath}}</string>
+        <key>ProgramArguments</key>
+        <array>
+            {{range .EscapedArguments}}
+                <string>{{.}}</string>
+            {{end}}
+	    </array>
         <key>RunAtLoad</key>
         <true/>
         <key>StandardOutPath</key>
-        <string>{{.StdOutPath}}</string>
+        <string>/dev/null</string>
         <key>StandardErrorPath</key>
-        <string>{{.StdErrPath}}</string>
+        <string>/dev/null</string>
     </dict>
 </plist>

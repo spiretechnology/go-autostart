@@ -1,4 +1,4 @@
-package autostart
+package appdata
 
 import (
 	"os"

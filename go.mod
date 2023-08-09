@@ -1,4 +1,4 @@
-module github.com/spiretechnology/go-autostart
+module github.com/spiretechnology/go-autostart/v2
 
 go 1.20
 
